@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgriCare — Pesticide Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-bg" style="background-image: url('assets/images/image.jpg');">
+
+  <header class="site-header">
+    <div class="brand">
+      <h1>AgriCare</h1>
+      <div class="tagline">Your Shield Against Unwanted Guests</div>
+    </div>
+
+    <div class="nav-wrap">
+      <nav class="top-nav" id="topNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cart.html" class="nav-link">Cart</a>
+        <a href="orders.html" class="nav-link">My Orders</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="auth/login.html" class="nav-link" id="loginNav">Login</a>
+      </nav>
+    </div>
+
+    <div class="header-cart">
+      <button id="openCartBtn" class="cart-btn">Cart <span id="headerCartCount">0</span></button>
+    </div>
+  </header>
+
+  <!-- top search -->
+  <div class="top-search">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input id="searchBox" placeholder="Search pesticides, ingredients or crops..." />
+    </div>
+  </div>
+
+  <main class="container">
+    <aside class="left-col card">
+      <h3>Filters</h3>
+
+      <label class="filter-row">
+        <span>Crop</span>
+        <select id="sideCropFilter"><option>All</option></select>
+      </label>
+
+      <label class="filter-row">
+        <span>Sort</span>
+        <select id="sideSortBy">
+          <option value="name">Name (A → Z)</option>
+          <option value="price">Price (low → high)</option>
+        </select>
+      </label>
+
+      <div class="divider"></div>
+
+      <div class="cart-summary small">
+        <h4>Cart (<span id="cartCount">0</span>)</h4>
+        <div id="cartPreview">Cart is empty</div>
+        <div class="cart-total">Subtotal: ₹<span id="cartTotal">0</span></div>
+        <button id="openCartBtn2" class="btn full">Open Cart</button>
+      </div>
+    </aside>
+
+    <section class="right-col">
+      <div id="catalog" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 AgriCare | Sustainable Crop Protection</div>
+    <div>Contact: 1agricare.pesticides@gmail.com</div>
+     <div>Created By:- Srujal Patel, Manav Patel</div>
+     
+  </footer>
+
+  <!-- Cart drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h3>Your Cart</h3>
+      <button id="closeCartBtn" class="close-btn">✕</button>
+    </div>
+    <div id="cartItemsList" class="drawer-items"></div>
+    <div class="drawer-footer">
+      <div class="drawer-sub">Subtotal: ₹<span id="drawerSubtotal">0</span></div>
+      <div style="margin-top:8px">Delivery: ₹<span id="drawerDelivery">0</span></div>
+      <div class="drawer-actions">
+        <button id="checkoutDrawer" class="btn">Checkout</button>
+        <button id="clearCart" class="btn ghost">Clear</button>
+      </div>
+    </div>
+  </aside>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
