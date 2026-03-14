@@ -1,4 +1,4 @@
-AgriCare — Frontend demo (GitHub Pages)
+AgriCare 
 --------------------------------------
 Folder structure:
 - index.html, cart.html, orders.html, contact.html
@@ -18,6 +18,4 @@ Deploy on GitHub Pages:
 - Settings -> Pages -> Source: main branch (root)
 - Wait a minute and open https://<username>.github.io/<repo>/
 
-Notes:
-- This site is demo-only. Login, cart, orders are client-side (localStorage).
-- Replace product images with manufacturer/distributor images & attach correct label PDFs before selling.
+
